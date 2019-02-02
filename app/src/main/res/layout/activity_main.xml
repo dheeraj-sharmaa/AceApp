@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:id="@+id/relLayout"
+    >
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:src="@drawable/mainbackground"
+        android:id="@+id/imgTS"/>
+
+    <com.jgabrielfreitas.core.BlurImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:src="@drawable/mainbackground"
+        android:id="@+id/blur"
+        android:visibility="invisible"/>
+
+    <EditText
+        android:id="@+id/etName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="107dp"
+        android:ems="10"
+        android:hint="Name"
+        android:textAlignment="center"
+        android:inputType="textPersonName"
+        android:visibility="invisible" />
+
+    <EditText
+        android:id="@+id/etRegNum"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/bStudent"
+        android:layout_centerHorizontal="true"
+        android:ems="10"
+        android:hint="Registration Number"
+        android:textAlignment="center"
+        android:inputType="number"
+        android:visibility="invisible" />
+
+    <Button
+        android:id="@+id/bProceed"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="247dp"
+        android:background="@drawable/button"
+        android:text="proceed"
+        android:visibility="invisible"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="216dp"
+        android:text="you can not edit these fields hereafter"
+        android:textAlignment="center"
+        android:id="@+id/note"
+        android:visibility="invisible"/>
+
+    <Button
+        android:id="@+id/bStudent"
+        android:layout_width="107dp"
+        android:layout_height="240dp"
+        android:layout_centerVertical="true"
+        android:layout_toStartOf="@+id/bProceed"
+        android:alpha="0"
+        android:background="@color/transparent"
+        android:onClick="bStudentClick" />
+
+    <Button
+        android:id="@+id/bTeacher"
+        android:layout_width="111dp"
+        android:layout_height="283dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginEnd="9dp"
+        android:layout_marginTop="137dp"
+        android:background="@color/transparent"
+        android:alpha="0"
+        android:onClick="bTeacherClick"/>
+
+    <TextView
+        android:id="@+id/tvTeacher"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="30dp"
+        android:text=""
+        android:textColor="@color/black"
+        android:textSize="26sp"
+        android:textStyle="bold" />
+
+</RelativeLayout>

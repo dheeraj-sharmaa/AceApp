@@ -1,0 +1,211 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/container"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/btnw"
+    tools:context=".HomeScreen"
+    android:focusable="true"
+    android:focusableInTouchMode="true"
+    android:scrollbars="vertical">
+
+
+    <android.support.design.widget.BottomNavigationView
+        android:id="@+id/navigation"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentStart="true"
+        android:background="?android:attr/windowBackground"
+        app:itemBackground="@drawable/btnw"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:menu="@menu/navigation" />
+
+    <ImageView
+        android:id="@+id/plus"
+        android:layout_width="40sp"
+        android:layout_height="40sp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignTop="@+id/photo"
+        android:layout_marginEnd="14dp"
+        android:onClick="AddSubject"
+        android:src="@drawable/plus"
+        android:contentDescription="TODO" />
+
+    <ImageView
+        android:id="@+id/cross"
+        android:layout_width="40sp"
+        android:layout_height="40sp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignTop="@+id/photo"
+        android:layout_marginEnd="14dp"
+        android:onClick="Clear"
+        android:src="@drawable/cross"
+        android:visibility="invisible"
+
+        />
+
+
+
+    <ImageView
+        android:id="@+id/photo"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="19dp"
+        android:src="@drawable/student"
+         />
+<ImageView
+        android:id="@+id/photoT"
+        android:layout_width="156dp"
+        android:layout_height="151dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="11dp"
+        android:src="@drawable/teacher"
+        android:visibility="invisible"/>
+
+
+    <TextView
+        android:id="@+id/tName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/photo"
+        android:layout_centerHorizontal="true"
+        android:shadowRadius="@integer/min_password_length"
+        android:textAlignment="center"
+        android:textSize="25sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/tRoll"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="197sp"
+        android:textAlignment="center"
+        android:textSize="20sp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="276dp"
+        android:background="@color/black">
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="2sp"
+        android:id="@+id/l2"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="312sp"
+        android:background="@color/black"
+        android:orientation="horizontal"
+        android:visibility="invisible">
+
+    </LinearLayout>
+
+    <EditText
+        android:id="@+id/textSub"
+        android:layout_width="249dp"
+        android:layout_height="40sp"
+        android:layout_alignParentTop="true"
+        android:layout_alignStart="@+id/calender"
+        android:layout_marginTop="227dp"
+        android:background="@drawable/btnw"
+        android:ems="10"
+        android:hint="Enter subject"
+        android:inputType="textPersonName"
+        android:textAlignment="center"
+        android:visibility="visible" />
+
+    <ImageView
+        android:id="@+id/tutorial"
+        android:layout_width="400sp"
+        android:layout_height="290sp"
+        android:layout_alignTop="@+id/recyclerView"
+        android:layout_marginTop="10sp"
+        android:src="@drawable/tutpic"
+        android:visibility="invisible" />
+
+    <Button
+        android:id="@+id/bDone"
+        android:layout_width="wrap_content"
+        android:layout_height="40sp"
+        android:layout_alignEnd="@+id/plus"
+        android:layout_alignTop="@+id/textSub"
+        android:onClick="DONE"
+        android:text="Done"
+        android:background="@drawable/btnw"
+        android:visibility="visible" />
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/recyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="290sp"
+        android:layout_above="@+id/navigation"
+        android:layout_alignParentStart="true" />
+
+    <Spinner
+        android:id="@+id/spinnerT"
+        android:layout_width="280sp"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/l2"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="-312sp"
+        android:visibility="invisible">
+
+    </Spinner>
+
+
+
+    <io.netopen.hotbitmapgg.library.view.RingProgressBar
+        android:id="@+id/circularP"
+        android:layout_width="150sp"
+        android:layout_height="150sp"
+        android:layout_alignTop="@+id/plus"
+        android:layout_centerHorizontal="true"
+
+        app:max="100"
+        app:ringColor="@color/red"
+        app:ringProgressColor="@color/green"
+        app:ringWidth="6dp"
+        app:style="STROKE"
+        app:textSize="0sp" />
+
+    <Button
+        android:id="@+id/calender"
+        android:layout_width="40sp"
+        android:layout_height="40sp"
+        android:layout_alignParentStart="true"
+        android:layout_alignTop="@+id/plus"
+        android:onClick="DatePicker"
+        android:layout_marginLeft="14dp"
+        android:visibility="invisible"
+        android:background="@drawable/calender"/>
+
+    <TextView
+        android:id="@+id/tvdate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="90sp"
+        android:layout_marginTop="8sp"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignTop="@+id/recyclerView"
+        android:visibility="invisible"
+         />
+
+
+
+</RelativeLayout>
